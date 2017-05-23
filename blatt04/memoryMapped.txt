@@ -1,0 +1,24 @@
+memory-mapped Input/Output (speicherbezogene Ein-/Ausgabe):
+Register der Peripherie wird wie Speicher adressiert.
+=> nur ein Adressraum
+Aufteilung wird in "memory-maps" festgelegt.
++ Sämtliche Befehle mit Speicherzugriff können auch auf die Peripherie angewendet werden.
++ einfachere CPU
+- Reduzierung des nutzbaren Speichers (wird immer unwichtiger)
+- Peripherie kann I/O Operationen verlangsamen wenn Adress- und Datenbus geteilt werden
+
+Serielle Schnittstelle:
+Bits werden nacheinander über eine Leitung übertragen. (z.B. Ethernet, USB, Firewire)
+Meist wird aber RS-232 gemeint.
+
+RS-232:
+verbindet 2 Geräte direkt miteinander
+ursprünglich 25 pins
+zu viele Verschaltungen
+
+Übertragung:
+in Wörtern (5-9 Bits),
+asynchron (kein Takt), Synchronisation durch Start- und Endflanke
+
+Paritätsbit:
+Tabelle 2 von http://www.hsg-kl.de/faecher/inf/netze/material/bitfuerbit.html

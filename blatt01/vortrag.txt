@@ -1,0 +1,25 @@
+R13 Stack pointer
+R14 Link Register (Rückspringadresse)
+R15 Program Counter (ARM: Welche Instruktion als Nächstes)
+CPSR Current Processor Status Register
+
+FIQ: Fast interrupt mode
+R0-R7: Gleich wie vorher
+R8-R14: leer, extra für FIQ, komplett physikalisch seperate Register. Nicht erreichbar aus anderen Modi.
+SPSR: Saved Processor Status Register
+
+Weitere Modi: IRQ, Supervisor, Abort, Undefined
+
+ARMv4 hat insgesamt 37 Register je 32 bit
+
+31 general purpose + 6 status register (1 CPSR, 5 SPSR)
+
+PC register: 32 bit groß, aber Instruktionen immer word aligned (4 Bytes, 32 Bit) => Bits[1:0] sind immer 0
+
+Datentypen:
+Byte: 8 Bits
+Halbwort: 16 Bits
+Wort: 32 Bits
+Doppelwort: 64 Bits
+
+Arithmetische und Logische Operationen nur auf 32 Bit (außer 64 Bit Multiplikation)

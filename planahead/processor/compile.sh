@@ -1,0 +1,1 @@
+vcom ./src/*.vhd

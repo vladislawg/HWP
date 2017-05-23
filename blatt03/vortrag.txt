@@ -1,0 +1,12 @@
+Big Endian: MSB zuerst, MIPS, PowerPC
+Little Endian: LSB zuerst, Intel x86
+
+von-Neumann-Architektur: Daten und Instruktionen zusammen
+Harvard-Architektur: Daten und Instruktionen getrennt
+
+Alignment:
+byteweise organisiert
+Direkter Zugriff nur möglich wenn Adresse Vielfaches von Busgröße
+ARMv4 gibt es nur ausgerichtete Zugriffe
+
+Tri-State: nicht nur '0' und '1', sondern auch hochohmiger Zustand 'Z'

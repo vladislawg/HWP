@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="8">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc3s500efg320-4" LaunchPart="xc3s500efg320-4" ConstrsSet="constrs_1" State="current" Dir="$PRUNDIR/synth_1" LaunchTime="1492607930">
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="XST-NGC" Name="or_gate.ngc"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+		<File Type="XST-SRP" Name="or_gate.srp"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="PA-XST" Name="or_gate.xst"/>
+		<File Type="PA-XSTPRJ" Name="or_gate.prj"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc3s500efg320-4" LaunchPart="xc3s500efg320-4" ConstrsSet="constrs_1" State="current" Dir="$PRUNDIR/impl_1" LaunchTime="1492608133">
+		<File Type="MAP-PSR" Name="or_gate.psr"/>
+		<File Type="PA-EDIF" Name="or_gate.edf"/>
+		<File Type="PAR-NCD" Name="or_gate_routed.ncd"/>
+		<File Type="PA-UCF" Name="or_gate.ucf"/>
+		<File Type="PAR-PAD" Name="or_gate_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="or_gate_routed.par"/>
+		<File Type="PAR-UNR" Name="or_gate_routed.unroutes"/>
+		<File Type="BG-BIT" Name="or_gate.bit"/>
+		<File Type="BG-DRC" Name="or_gate.drc"/>
+		<File Type="PA-CONSTRSDIR" Name=".constrs"/>
+		<File Type="BG-BGN" Name="or_gate.bgn"/>
+		<File Type="TRCE-TWR" Name="or_gate.twr"/>
+		<File Type="TRCE-TWX" Name="or_gate.twx"/>
+		<File Type="XDL-XDL" Name="or_gate_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+		<File Type="NGDB-NGD" Name="or_gate.ngd"/>
+		<File Type="NGDB-BLD" Name="or_gate.bld"/>
+		<File Type="MAP-NCD" Name="or_gate.ncd"/>
+		<File Type="MAP-PCF" Name="or_gate.pcf"/>
+		<File Type="MAP-MRP" Name="or_gate.mrp"/>
+		<File Type="MAP-MAP" Name="or_gate.map"/>
+	</Run>
+</Runs>
+

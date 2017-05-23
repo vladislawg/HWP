@@ -1,0 +1,26 @@
+7 Betriebsmodi:
+User (usr): einziger unpreviligerter Modus
+System (sys): für Kernel
+Interrupt Request (irq): hardware Interrupts
+Fast Interrupt Request (fiq): priorisierte IRQ
+Supervisor [Call] (svc): Software Interrupt
+Data Abort (abt): z.B. fehlerhafter Speicherzugriff
+Undefined (und): nicht unterstützte Befehle
+
+R13 und R14 sind separat für jeden Modus:
+6 Statusregister (ein current, 5 saved)
+Fast Interrupt hat R8-R14 seperat.
+modusunabhängig (unbanked): R0-R7
+
+VHDL Speicher:
+ein Flipflop pro Bit
+Speicherelemente kann man in VHDL nur implizit durch Prozesse beschreiben!
+
+Möglichkeiten des Spartan3E:
+Singleport & Dualport, Block-Ram & verteilter Speicher
+Schreibzugriffe nur synchron
+Lesen:
+	sync->Block-RAM
+	async->verteilter RAM als Schaltungen aus CLBs
+
+XST optimiert für Geschwindigkeit, daher evtl großer Platzverbrauch

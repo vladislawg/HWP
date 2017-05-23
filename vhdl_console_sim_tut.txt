@@ -1,0 +1,22 @@
+Um alles in der Konsole zu lösen, was modelsim betrifft:
+
+gilt für planahead/processor/ und die verzeichnisstrukur darin.
+für andere verzeichnisse ähnlich anwendbar evtl verzeichnisstruktur anpassen
+
+Step by step:
+
+(-1) vlib work 		-workverzeichnis erstellen
+(0 ) vmap work work 	-workverzeichnis modelsim mitteilen
+
+Schritte -1 und 0 nur notwendig für ein neues verzeichnis. Nach 1. einrichten nicht mehr notwenig. 
+Muss bei jedem PC gemacht werden. modelsim.ini und work/ sollten nicht mit im git sein. sollte durch die .gitignore
+gelöst sein.
+
+1 .vhd dateien in src/ kopieren
+2 kompilieren
+  a) bash compile.sh 	-kompiliert alles evtl fehler durch falsche reihenfolge
+  b) vcom src/datei.vhd -komiliert die datei (sinnvoll, wenn nur an dieser gearbeitet wird und der rest schon fertig ist 
+3 vsim -c testbench 	-wichtig -c für die console sonst öffnet sich modelsim. und kein .vhd hinter der tb
+4 run -all 		-lässt die tb laufen
+5 q oder quit 		-beendet modelsim console
+

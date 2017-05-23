@@ -20,26 +20,61 @@ entity Ampel is
 end entity Ampel;
 
 architecture behave of Ampel is
---------------------------------------------------------------------------------	
---	Zustaende der Ampel als neuer Typ ohne festgelegte Codierung. 
+--------------------------------------------------------------------------------
+--	Zustaende der Ampel als neuer Typ ohne festgelegte Codierung.
 --	AMPEL_STATE speichert den aktuellen Zustand der Ampel und wird
---	in einem sequenziellen Prozess gesetzt. AMPEL_NEXT_STATE ist der 
+--	in einem sequenziellen Prozess gesetzt. AMPEL_NEXT_STATE ist der
 --	Zustand, den die Ampel mit der naechsten steigenden Taktflanke
 --	annimmt.
---------------------------------------------------------------------------------	
+--------------------------------------------------------------------------------
 	type AMPEL_STATE_TYPE is (S_ROT,S_GELB,S_GRUEN,S_GELBROT,S_AUS);
 	signal AMPEL_STATE 	: AMPEL_STATE_TYPE := S_ROT;
 	signal AMPEL_NEXT_STATE : AMPEL_STATE_TYPE := S_ROT;
 
 begin
 
-	state_reg : process(...?...)is
+	state_reg : process(CLK, RST)is
 	begin
-
+			if RST = 1 then
+				AMPEL_STATE <= A_ROT;
+			elsif (CLK = '1' and CLK'Event) then
+				case AMPEL_STATE is
+					when S_ROT => if(E_AKTIV = '1') then
+														AMPEL_NEXT_STATE <= S_GELBROT;
+												else
+														AMPEL_NEXT_STATE <= S_AUS;
+												end if;
+					when S_GELBROT => AMPEL_NEXT_STATE <= S_GRUEN;
+					when S_GRUEN => AMPEL_NEXT_STATE <= S_GELB;
+					when S_GELB => if (E_AKTIV = '1') then
+														AMPEL_NEXT_STATE <= S_ROT;
+												 else
+														AMPEL_NEXT_STATE <= S_AUS;
+												 end if;
+					when S_AUS => AMPEL_NEXT_STATE <= S_GELB;
+				end case;
+			end if;
 	end process state_reg;
 
-	set_output_and_next_state : process(...?...) is
+	set_output_and_next_state : process(AMPEL_NEXT_STATE) is
 	begin
+		case AMPEL_NEXT_STATE is
+			when S_ROT => A_ROT = '1',
+										A_GELB = '0',
+										A_GRUEN = '0';
+			when S_GELBROT => A_ROT = '1',
+												A_GELB = '1',
+												A_GRUEN = '0';
+			when S_GELB => 	A_ROT = '0',
+											A_GELB = '1',
+											A_GRUEN = '0';
+			when S_GRUEN => A_ROT = '0',
+											A_GELB = '0',
+											A_GRUEN = '1';
+			when S_AUS => A_ROT = '0',
+										A_GELB = '0',
+										A_GRUEN = '0';
+		end case;
 
 	end process set_output_and_next_state;
 
@@ -48,7 +83,7 @@ begin
 
 -- synthesis translate_off
 --------------------------------------------------------------------------------
---	Typen, Signale und Konstanten fuer einen automatischen Test auf 
+--	Typen, Signale und Konstanten fuer einen automatischen Test auf
 --	korrekte Uebergaenge zwischen Zustaenden des Automaten auf Basis eines
 --	Referenzmodells in Form einer Adjazenzmatrix.
 --------------------------------------------------------------------------------
@@ -63,19 +98,19 @@ begin
 assertion_test : block is
 	type TRANSITION_CONDITION_TYPE is ('0','1','-','X');
 	type A_MATRIX_TYPE is array(S_ROT to S_AUS, S_ROT to S_AUS) of TRANSITION_CONDITION_TYPE;
-        constant A_MATRIX : A_MATRIX_TYPE := 
+        constant A_MATRIX : A_MATRIX_TYPE :=
        --ROT,GELB,GRUEN,GELBROT,AUS
 	(('X','X','X','1','0'),		--ROT
 	 ('1','X','X','X','0'),		--GELB
 	 ('X','-','X','X','X'),		--GRUEN
 	 ('X','X','-','X','X'),		--GELBROT
-	 ('X','-','X','X','X'));	--AUS	
+	 ('X','-','X','X','X'));	--AUS
 	signal LAST_STATE : AMPEL_STATE_TYPE := S_ROT;
 begin
 
 --------------------------------------------------------------------------------
 --	Automatischer Test auf korrekte Zustandsuebergange durch
---	Betrachtung des aktuellen und des vorherigen Zustandes und den Wert von 
+--	Betrachtung des aktuellen und des vorherigen Zustandes und den Wert von
 --	E_AKTIV. Es wird nur erkannt, ob eine aufgetretene Transition korrekt
 --	war. Fehlende Transitionen werden nicht unmittelbar erkannt!
 ---------------------------------------------------------------------------------
@@ -84,19 +119,19 @@ begin
 		variable TC : TRANSITION_CONDITION_TYPE;
 	begin
 ---------------------------------------------------------------------------------
---	Fehler zum Initialisierungszeitpunkt der Simulation ignorieren. 
+--	Fehler zum Initialisierungszeitpunkt der Simulation ignorieren.
 ---------------------------------------------------------------------------------
 		if NOW > 0 ps then
 ---------------------------------------------------------------------------------
---	Falls in der Simulation RST "gleichzeitig" mit dem Taktsignal 
+--	Falls in der Simulation RST "gleichzeitig" mit dem Taktsignal
 --	gesetzt, aber vom Automaten synchron ausgewertet wird, versetzt es ihn
 --	nicht sofort nach S_ROT (moegliche Race Condition).
 ---------------------------------------------------------------------------------
 			if RST = '1' then
 				if ((RST'last_event /= CLK'last_event) or CLK = '0') then
 ---------------------------------------------------------------------------------
---	Assertion: Reset versetzt den Automat in den Startzustand S_ROT, 
---	ob synchron oder asynchron ist nicht spezifiziert.				
+--	Assertion: Reset versetzt den Automat in den Startzustand S_ROT,
+--	ob synchron oder asynchron ist nicht spezifiziert.
 ---------------------------------------------------------------------------------
 					assert (AMPEL_STATE) = S_ROT report "Reset versetzt Automat nicht nach S_ROT" severity error;
 				else
@@ -106,7 +141,7 @@ begin
 --	Daher: kein Test.
 ---------------------------------------------------------------------------------
 					null;
-				end if;	
+				end if;
 			else
 				TC := A_MATRIX(LAST_STATE,AMPEL_STATE);
 				if TC = 'X' then
@@ -121,7 +156,7 @@ begin
 					if E_AKTIV = '0' then
 						report "Zustandsuebergang von  " & AMPEL_STATE_TYPE'image(LAST_STATE) & " nach " & AMPEL_STATE_TYPE'image(AMPEL_STATE) & " mit falscher Bedingung E_AKTIV = 0" severity error;
 					end if;
-				end if;	
+				end if;
 			end if;
 		end if;
 

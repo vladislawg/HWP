@@ -35,8 +35,8 @@ begin
 
 	state_reg : process(CLK, RST)is
 	begin
-			if RST = 1 then
-				AMPEL_STATE <= A_ROT;
+			if RST = '1' then
+				AMPEL_STATE <= S_ROT;
 			elsif (CLK = '1' and CLK'Event) then
 				case AMPEL_STATE is
 					when S_ROT => if(E_AKTIV = '1') then
@@ -59,21 +59,21 @@ begin
 	set_output_and_next_state : process(AMPEL_NEXT_STATE) is
 	begin
 		case AMPEL_NEXT_STATE is
-			when S_ROT => A_ROT = '1',
-										A_GELB = '0',
-										A_GRUEN = '0';
-			when S_GELBROT => A_ROT = '1',
-												A_GELB = '1',
-												A_GRUEN = '0';
-			when S_GELB => 	A_ROT = '0',
-											A_GELB = '1',
-											A_GRUEN = '0';
-			when S_GRUEN => A_ROT = '0',
-											A_GELB = '0',
-											A_GRUEN = '1';
-			when S_AUS => A_ROT = '0',
-										A_GELB = '0',
-										A_GRUEN = '0';
+			when S_ROT => A_ROT <= '1' ;
+										A_GELB <= '0';
+										A_GRUEN <= '0';
+			when S_GELBROT => A_ROT <= '1';
+												A_GELB <= '1';
+												A_GRUEN <= '0';
+			when S_GELB => 	A_ROT <= '0';
+											A_GELB <= '1';
+											A_GRUEN <= '0';
+			when S_GRUEN => A_ROT <= '0';
+											A_GELB <= '0';
+											A_GRUEN <= '1';
+			when S_AUS => A_ROT <= '0';
+										A_GELB <= '0';
+										A_GRUEN <= '0';
 		end case;
 
 	end process set_output_and_next_state;

@@ -1,0 +1,774 @@
+Release 13.3 - xst O.76xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Reading design: ArmUncoreTop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ArmUncoreTop.prj"
+
+---- Target Parameters
+Target Device                      : xc3s500efg320-4
+Output File Name                   : "ArmUncoreTop.ngc"
+
+---- Source Options
+Top Module Name                    : ArmUncoreTop
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/processor/processor.srcs/sources_1/imports/src/ArmTypes.vhd" in Library work.
+Package <ArmTypes> compiled.
+Package body <ArmTypes> compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRAMB_4kx8.vhd" in Library work.
+Entity <ArmRAMB_4kx8> compiled.
+Entity <ArmRAMB_4kx8> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmConfiguration.vhd" in Library work.
+Package <ArmConfiguration> compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmGlobalProbes.vhd" in Library work.
+Package <ArmGlobalProbes> compiled.
+Package body <ArmGlobalProbes> compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmClkGen.vhd" in Library work.
+Entity <ArmClkGen> compiled.
+Entity <ArmClkGen> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmWaitStateGenAsync.vhd" in Library work.
+Entity <ArmWaitStateGenAsync> compiled.
+Entity <ArmWaitStateGenAsync> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRAMB_4kx32.vhd" in Library work.
+Entity <ArmRAMB_4kx32> compiled.
+Entity <ArmRAMB_4kx32> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmSwitchDebounce.vhd" in Library work.
+Entity <ArmSwitchDebounce> compiled.
+Entity <ArmSwitchDebounce> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmChipSelectGenerator.vhd" in Library work.
+Entity <ArmChipSelectGenerator> compiled.
+Entity <ArmChipSelectGenerator> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmMemInterface.vhd" in Library work.
+Entity <ArmMemInterface> compiled.
+Entity <ArmMemInterface> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRS232Interface.vhd" in Library work.
+Entity <ArmRS232Interface> compiled.
+Entity <ArmRS232Interface> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmSystemController.vhd" in Library work.
+Entity <ArmSystemController> compiled.
+Entity <ArmSystemController> (Architecture <behave>) compiled.
+Compiling vhdl file "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd" in Library work.
+Entity <ArmUncoreTop> compiled.
+Entity <ArmUncoreTop> (Architecture <behave>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ArmUncoreTop> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <ArmSwitchDebounce> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <ArmChipSelectGenerator> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <ArmMemInterface> in library <work> (architecture <behave>) with generics.
+	EXTERNAL_ADDRESS_DECODING_INSTRUCTION = false
+	SELECT_LINES = 1
+
+Analyzing hierarchy for entity <ArmRS232Interface> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <ArmSystemController> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <ArmWaitStateGenAsync> in library <work> (architecture <behave>) with generics.
+	COUNT_VALUE_WIDTH = 16
+
+Analyzing hierarchy for entity <ArmRAMB_4kx32> in library <work> (architecture <behavioral>) with generics.
+	SELECT_LINES = 1
+
+Analyzing hierarchy for entity <ArmWaitStateGenAsync> in library <work> (architecture <BEHAVE>) with generics.
+	COUNT_VALUE_WIDTH = 32
+
+Analyzing hierarchy for entity <ArmClkGen> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <ArmRAMB_4kx8> in library <work> (architecture <behavioral>) with generics.
+	SIZE = 4096
+	WIDTH = 8
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ArmUncoreTop> in library <work> (Architecture <behave>).
+WARNING:Xst:753 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd" line 190: Unconnected output port 'ID' of component 'ArmMemInterface'.
+WARNING:Xst:753 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd" line 190: Unconnected output port 'IABORT' of component 'ArmMemInterface'.
+WARNING:Xst:753 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd" line 209: Unconnected output port 'RS232_IRQ' of component 'ArmRS232Interface'.
+WARNING:Xst:753 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd" line 224: Unconnected output port 'CTRL_WAIT' of component 'ArmSystemController'.
+Entity <ArmUncoreTop> analyzed. Unit <ArmUncoreTop> generated.
+
+Analyzing Entity <ArmSwitchDebounce> in library <work> (Architecture <behave>).
+Entity <ArmSwitchDebounce> analyzed. Unit <ArmSwitchDebounce> generated.
+
+Analyzing generic Entity <ArmWaitStateGenAsync.1> in library <work> (Architecture <behave>).
+	COUNT_VALUE_WIDTH = 16
+Entity <ArmWaitStateGenAsync.1> analyzed. Unit <ArmWaitStateGenAsync.1> generated.
+
+Analyzing Entity <ArmChipSelectGenerator> in library <work> (Architecture <behave>).
+Entity <ArmChipSelectGenerator> analyzed. Unit <ArmChipSelectGenerator> generated.
+
+Analyzing generic Entity <ArmMemInterface> in library <work> (Architecture <behave>).
+	EXTERNAL_ADDRESS_DECODING_INSTRUCTION = false
+	SELECT_LINES = 1
+Entity <ArmMemInterface> analyzed. Unit <ArmMemInterface> generated.
+
+Analyzing generic Entity <ArmRAMB_4kx32> in library <work> (Architecture <behavioral>).
+	SELECT_LINES = 1
+Entity <ArmRAMB_4kx32> analyzed. Unit <ArmRAMB_4kx32> generated.
+
+Analyzing generic Entity <ArmRAMB_4kx8> in library <work> (Architecture <behavioral>).
+	SIZE = 4096
+	WIDTH = 8
+Entity <ArmRAMB_4kx8> analyzed. Unit <ArmRAMB_4kx8> generated.
+
+Analyzing Entity <ArmRS232Interface> in library <work> (Architecture <behave>).
+WARNING:Xst:819 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRS232Interface.vhd" line 450: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <message>
+INFO:Xst:2679 - Register <REGISTER_SET<2><7>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <REGISTER_SET<2><6>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <REGISTER_SET<2><5>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <REGISTER_SET<2><3>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <REGISTER_SET<2><2>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <REGISTER_SET<2><1>> in unit <ArmRS232Interface> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ArmRS232Interface> analyzed. Unit <ArmRS232Interface> generated.
+
+Analyzing generic Entity <ArmWaitStateGenAsync.2> in library <work> (Architecture <BEHAVE>).
+	COUNT_VALUE_WIDTH = 32
+Entity <ArmWaitStateGenAsync.2> analyzed. Unit <ArmWaitStateGenAsync.2> generated.
+
+Analyzing Entity <ArmSystemController> in library <work> (Architecture <behave>).
+WARNING:Xst:753 - "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmSystemController.vhd" line 119: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'ArmClkGen'.
+Entity <ArmSystemController> analyzed. Unit <ArmSystemController> generated.
+
+Analyzing Entity <ArmClkGen> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <ArmClkGen>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <ArmClkGen>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <ArmClkGen>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKFX_DIVIDE =  10" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "CLK_FEEDBACK =  NONE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <ArmClkGen>.
+Entity <ArmClkGen> analyzed. Unit <ArmClkGen> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ArmChipSelectGenerator>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmChipSelectGenerator.vhd".
+WARNING:Xst:647 - Input <CSG_DA<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <RAW_CS_SIGNALS<2:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit tristate buffer for signal <CSG_ABORT>.
+    Summary:
+	inferred   1 Tristate(s).
+Unit <ArmChipSelectGenerator> synthesized.
+
+
+Synthesizing Unit <ArmWaitStateGenAsync_1>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmWaitStateGenAsync.vhd".
+    Found 16-bit down counter for signal <COUNT_REG>.
+    Found 16-bit comparator lessequal for signal <COUNT_REG$cmp_le0000> created at line 52.
+    Found 16-bit comparator greater for signal <WSG_WAIT$cmp_gt0000> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 Comparator(s).
+Unit <ArmWaitStateGenAsync_1> synthesized.
+
+
+Synthesizing Unit <ArmRAMB_4kx8>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRAMB_4kx8.vhd".
+    Found 4096x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 8-bit register for signal <DOA>.
+    Found 8-bit register for signal <DOB>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <ArmRAMB_4kx8> synthesized.
+
+
+Synthesizing Unit <ArmWaitStateGenAsync_2>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmWaitStateGenAsync.vhd".
+    Found 32-bit down counter for signal <COUNT_REG>.
+    Found 32-bit comparator lessequal for signal <COUNT_REG$cmp_le0000> created at line 52.
+    Found 32-bit subtractor for signal <COUNT_REG$sub0000> created at line 49.
+    Found 32-bit comparator greater for signal <WSG_WAIT$cmp_gt0000> created at line 30.
+    Found 32-bit comparator greater for signal <WSG_WAIT$cmp_gt0001> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <ArmWaitStateGenAsync_2> synthesized.
+
+
+Synthesizing Unit <ArmSwitchDebounce>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmSwitchDebounce.vhd".
+    Found 1-bit register for signal <INPUT_VALUE>.
+    Found 1-bit register for signal <WSG_START>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <ArmSwitchDebounce> synthesized.
+
+
+Synthesizing Unit <ArmRS232Interface>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRS232Interface.vhd".
+WARNING:Xst:647 - Input <RS232_DDIN<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <TRANSMITTER_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 11                                             |
+    | Clock              | SYS_CLK                   (rising_edge)        |
+    | Reset              | SYS_RST                   (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <RCV_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 35                                             |
+    | Clock              | SYS_CLK                   (rising_edge)        |
+    | Reset              | SYS_RST                   (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rcv_idle                                       |
+    | Power Up State     | rcv_idle                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <RS232_DABORT>.
+    Found 32-bit tristate buffer for signal <RS232_DDOUT>.
+    Found 1-bit register for signal <DATA_IN_BIT_REG>.
+    Found 1-bit register for signal <DATA_RECEIVED_REG>.
+    Found 32-bit 4-to-1 multiplexer for signal <DDOUT_INTERNAL>.
+    Found 1-bit register for signal <fuckingstart>.
+    Found 8-bit register for signal <message>.
+    Found 8-bit register for signal <RCV_DATA_REG>.
+    Found 8-bit register for signal <RECEIVER_DATA>.
+    Found 16-bit register for signal <REGISTER_SET<0:1>>.
+    Found 1-bit register for signal <SET_DATA_REG>.
+    Found 1-bit register for signal <START_TRANSMISSION>.
+    Found 32-bit register for signal <WSG_DELAY_REG>.
+    Found 1-bit register for signal <WSG_START_REG>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  80 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+	inferred  33 Tristate(s).
+Unit <ArmRS232Interface> synthesized.
+
+
+Synthesizing Unit <ArmRAMB_4kx32>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmRAMB_4kx32.vhd".
+Unit <ArmRAMB_4kx32> synthesized.
+
+
+Synthesizing Unit <ArmClkGen>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmClkGen.vhd".
+Unit <ArmClkGen> synthesized.
+
+
+Synthesizing Unit <ArmMemInterface>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmMemInterface.vhd".
+WARNING:Xst:647 - Input <DA<31:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit tristate buffer for signal <IABORT>.
+    Found 1-bit tristate buffer for signal <DABORT>.
+    Found 32-bit tristate buffer for signal <DDOUT>.
+    Found 32-bit tristate buffer for signal <ID>.
+    Summary:
+	inferred  66 Tristate(s).
+Unit <ArmMemInterface> synthesized.
+
+
+Synthesizing Unit <ArmSystemController>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmSystemController.vhd".
+WARNING:Xst:647 - Input <CTRL_DABORT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_2> for signal <CTRL_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 9                                              |
+    | Clock              | DCM_SYS_CLK               (rising_edge)        |
+    | Reset              | SYS_RST_INTERNAL          (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | ctrl_idle                                      |
+    | Power Up State     | ctrl_idle                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 2-bit tristate buffer for signal <CTRL_DMAS>.
+    Found 32-bit tristate buffer for signal <CTRL_DA>.
+    Found 1-bit tristate buffer for signal <CTRL_DnRW>.
+    Found 32-bit tristate buffer for signal <CTRL_DDOUT>.
+    Found 16-bit register for signal <BYTE_CNT>.
+    Found 16-bit addsub for signal <BYTE_CNT$share0000> created at line 204.
+    Found 16-bit comparator greater for signal <CTRL_STATE$cmp_gt0000> created at line 313.
+    Found 32-bit comparator lessequal for signal <CTRL_STATE$cmp_le0000> created at line 250.
+    Found 32-bit comparator less for signal <CTRL_STATE$cmp_lt0000> created at line 214.
+    Found 32-bit comparator less for signal <CTRL_STATE$cmp_lt0001> created at line 295.
+    Found 8-bit register for signal <CTRL_STATUS_REG>.
+    Found 1-bit register for signal <CTRL_WORKING>.
+    Found 32-bit register for signal <DATA_ADDRESS_VECTOR>.
+    Found 32-bit adder for signal <DATA_ADDRESS_VECTOR$addsub0000> created at line 296.
+    Found 32-bit register for signal <DATA_IN_REG>.
+    Found 1-bit register for signal <DATA_nRW_REG>.
+    Found 32-bit register for signal <DATA_REG>.
+    Found 1-bit register for signal <INIT_RST>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 123 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  67 Tristate(s).
+Unit <ArmSystemController> synthesized.
+
+
+Synthesizing Unit <ArmUncoreTop>.
+    Related source file is "/afs/tu-berlin.de/home/s/sebastian.haenisch/irb-ubuntu/Dokumente/hwp/planahead/processor/src/ArmUncoreTop.vhd".
+WARNING:Xst:646 - Signal <CSG_CS_LINES<2:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ArmUncoreTop> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 4096x8-bit dual-port RAM                              : 4
+# Adders/Subtractors                                   : 4
+ 16-bit addsub                                         : 1
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 2
+# Counters                                             : 3
+ 16-bit down counter                                   : 1
+ 32-bit down counter                                   : 2
+# Registers                                            : 32
+ 1-bit register                                        : 13
+ 16-bit register                                       : 1
+ 32-bit register                                       : 4
+ 8-bit register                                        : 14
+# Comparators                                          : 12
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 4
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 3
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+# Tristates                                            : 42
+ 1-bit tristate buffer                                 : 37
+ 2-bit tristate buffer                                 : 1
+ 32-bit tristate buffer                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <Inst_ArmSystemController/CTRL_STATE/FSM> on signal <CTRL_STATE[1:9]> with one-hot encoding.
+--------------------------------------
+ State                   | Encoding
+--------------------------------------
+ ctrl_idle               | 000000001
+ ctrl_read_stdin_status  | 000000010
+ ctrl_read_stdin_data    | 000000100
+ ctrl_read_stdout_status | 000100000
+ ctrl_write_stdout_data  | 010000000
+ ctrl_read_mem           | 000001000
+ ctrl_write_mem          | 000010000
+ ctrl_finished           | 100000000
+ ctrl_wait_state         | 001000000
+--------------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Inst_ArmRS232Interface/RCV_STATE/FSM> on signal <RCV_STATE[1:2]> with gray encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ rcv_idle     | 00
+ rcv_read_bit | 01
+ rcv_stopp    | 11
+--------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_ArmRS232Interface/TRANSMITTER_STATE/FSM> on signal <TRANSMITTER_STATE[1:11]> with one-hot encoding.
+-----------------------
+ State  | Encoding
+-----------------------
+ idle   | 00000000001
+ bstart | 00000000010
+ b0     | 00000000100
+ b1     | 00000001000
+ b2     | 00000010000
+ b3     | 00000100000
+ b4     | 00001000000
+ b5     | 00010000000
+ b6     | 00100000000
+ b7     | 01000000000
+ bend   | 10000000000
+-----------------------
+
+Synthesizing (advanced) Unit <ArmRAMB_4kx8>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <DOB> <DOA>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <RAM_CLK>       | rise     |
+    |     enA            | connected to signal <ENB>           | high     |
+    |     weA            | connected to signal <WEB>           | high     |
+    |     addrA          | connected to signal <ADDRB>         |          |
+    |     diA            | connected to signal <DIB>           |          |
+    |     doA            | connected to signal <DOB>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <RAM_CLK>       | rise     |
+    |     enB            | connected to signal <ENA>           | high     |
+    |     addrB          | connected to signal <ADDRA>         |          |
+    |     doB            | connected to signal <DOA>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ArmRAMB_4kx8> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# RAMs                                                 : 4
+ 4096x8-bit dual-port block RAM                        : 4
+# Adders/Subtractors                                   : 4
+ 16-bit addsub                                         : 1
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 2
+# Counters                                             : 3
+ 16-bit down counter                                   : 1
+ 32-bit down counter                                   : 2
+# Registers                                            : 205
+ Flip-Flops                                            : 205
+# Comparators                                          : 12
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 4
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 3
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <WSG_DELAY_REG_0> in Unit <ArmRS232Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <WSG_DELAY_REG_3> <WSG_DELAY_REG_5> <WSG_DELAY_REG_7> 
+INFO:Xst:2261 - The FF/Latch <WSG_DELAY_REG_1> in Unit <ArmRS232Interface> is equivalent to the following 25 FFs/Latches, which will be removed : <WSG_DELAY_REG_4> <WSG_DELAY_REG_6> <WSG_DELAY_REG_9> <WSG_DELAY_REG_10> <WSG_DELAY_REG_11> <WSG_DELAY_REG_12> <WSG_DELAY_REG_13> <WSG_DELAY_REG_14> <WSG_DELAY_REG_15> <WSG_DELAY_REG_16> <WSG_DELAY_REG_17> <WSG_DELAY_REG_18> <WSG_DELAY_REG_19> <WSG_DELAY_REG_20> <WSG_DELAY_REG_21> <WSG_DELAY_REG_22> <WSG_DELAY_REG_23> <WSG_DELAY_REG_24> <WSG_DELAY_REG_25> <WSG_DELAY_REG_26> <WSG_DELAY_REG_27> <WSG_DELAY_REG_28> <WSG_DELAY_REG_29> <WSG_DELAY_REG_30> <WSG_DELAY_REG_31> 
+WARNING:Xst:1710 - FF/Latch <WSG_DELAY_REG_1> (without init value) has a constant value of 0 in block <ArmRS232Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WSG_DELAY_REG_2> (without init value) has a constant value of 1 in block <ArmRS232Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_17> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_18> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_19> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_20> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_21> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_22> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_23> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_24> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_25> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_26> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_27> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_28> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_29> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DATA_ADDRESS_VECTOR_30> has a constant value of 0 in block <ArmSystemController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2039 - Unit ArmUncoreTop: 1 multi-source signal is replaced by logic (pull-up yes): DBUS_ABORT.
+WARNING:Xst:2042 - Unit ArmMemInterface: 66 internal tristates are replaced by logic (pull-up yes): DABORT, DDOUT<0>, DDOUT<10>, DDOUT<11>, DDOUT<12>, DDOUT<13>, DDOUT<14>, DDOUT<15>, DDOUT<16>, DDOUT<17>, DDOUT<18>, DDOUT<19>, DDOUT<1>, DDOUT<20>, DDOUT<21>, DDOUT<22>, DDOUT<23>, DDOUT<24>, DDOUT<25>, DDOUT<26>, DDOUT<27>, DDOUT<28>, DDOUT<29>, DDOUT<2>, DDOUT<30>, DDOUT<31>, DDOUT<3>, DDOUT<4>, DDOUT<5>, DDOUT<6>, DDOUT<7>, DDOUT<8>, DDOUT<9>, IABORT, ID<0>, ID<10>, ID<11>, ID<12>, ID<13>, ID<14>, ID<15>, ID<16>, ID<17>, ID<18>, ID<19>, ID<1>, ID<20>, ID<21>, ID<22>, ID<23>, ID<24>, ID<25>, ID<26>, ID<27>, ID<28>, ID<29>, ID<2>, ID<30>, ID<31>, ID<3>, ID<4>, ID<5>, ID<6>, ID<7>, ID<8>, ID<9>.
+WARNING:Xst:2042 - Unit ArmSystemController: 67 internal tristates are replaced by logic (pull-up yes): CTRL_DA<0>, CTRL_DA<10>, CTRL_DA<11>, CTRL_DA<12>, CTRL_DA<13>, CTRL_DA<14>, CTRL_DA<15>, CTRL_DA<16>, CTRL_DA<17>, CTRL_DA<18>, CTRL_DA<19>, CTRL_DA<1>, CTRL_DA<20>, CTRL_DA<21>, CTRL_DA<22>, CTRL_DA<23>, CTRL_DA<24>, CTRL_DA<25>, CTRL_DA<26>, CTRL_DA<27>, CTRL_DA<28>, CTRL_DA<29>, CTRL_DA<2>, CTRL_DA<30>, CTRL_DA<31>, CTRL_DA<3>, CTRL_DA<4>, CTRL_DA<5>, CTRL_DA<6>, CTRL_DA<7>, CTRL_DA<8>, CTRL_DA<9>, CTRL_DDOUT<0>, CTRL_DDOUT<10>, CTRL_DDOUT<11>, CTRL_DDOUT<12>, CTRL_DDOUT<13>, CTRL_DDOUT<14>, CTRL_DDOUT<15>, CTRL_DDOUT<16>, CTRL_DDOUT<17>, CTRL_DDOUT<18>, CTRL_DDOUT<19>, CTRL_DDOUT<1>, CTRL_DDOUT<20>, CTRL_DDOUT<21>, CTRL_DDOUT<22>, CTRL_DDOUT<23>, CTRL_DDOUT<24>, CTRL_DDOUT<25>, CTRL_DDOUT<26>, CTRL_DDOUT<27>, CTRL_DDOUT<28>, CTRL_DDOUT<29>, CTRL_DDOUT<2>, CTRL_DDOUT<30>, CTRL_DDOUT<31>, CTRL_DDOUT<3>, CTRL_DDOUT<4>, CTRL_DDOUT<5>, CTRL_DDOUT<6>, CTRL_DDOUT<7>, CTRL_DDOUT<8>, CTRL_DDOUT<9>, CTRL_DMAS<0>, CTRL_DMAS<1>, CTRL_DnRW.
+WARNING:Xst:2042 - Unit ArmRS232Interface: 33 internal tristates are replaced by logic (pull-up yes): RS232_DABORT, RS232_DDOUT<0>, RS232_DDOUT<10>, RS232_DDOUT<11>, RS232_DDOUT<12>, RS232_DDOUT<13>, RS232_DDOUT<14>, RS232_DDOUT<15>, RS232_DDOUT<16>, RS232_DDOUT<17>, RS232_DDOUT<18>, RS232_DDOUT<19>, RS232_DDOUT<1>, RS232_DDOUT<20>, RS232_DDOUT<21>, RS232_DDOUT<22>, RS232_DDOUT<23>, RS232_DDOUT<24>, RS232_DDOUT<25>, RS232_DDOUT<26>, RS232_DDOUT<27>, RS232_DDOUT<28>, RS232_DDOUT<29>, RS232_DDOUT<2>, RS232_DDOUT<30>, RS232_DDOUT<31>, RS232_DDOUT<3>, RS232_DDOUT<4>, RS232_DDOUT<5>, RS232_DDOUT<6>, RS232_DDOUT<7>, RS232_DDOUT<8>, RS232_DDOUT<9>.
+
+Optimizing unit <ArmUncoreTop> ...
+
+Optimizing unit <ArmWaitStateGenAsync_2> ...
+
+Optimizing unit <ArmSystemController> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 263
+ Flip-Flops                                            : 263
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ArmUncoreTop.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 825
+#      GND                         : 10
+#      INV                         : 22
+#      LUT1                        : 18
+#      LUT2                        : 69
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 127
+#      LUT4                        : 238
+#      LUT4_D                      : 17
+#      LUT4_L                      : 35
+#      MUXCY                       : 145
+#      MUXF5                       : 17
+#      VCC                         : 6
+#      XORCY                       : 119
+# FlipFlops/Latches                : 263
+#      FDE                         : 40
+#      FDR                         : 110
+#      FDRE                        : 75
+#      FDRS                        : 24
+#      FDRSE                       : 1
+#      FDS                         : 12
+#      FDSE                        : 1
+# RAMS                             : 8
+#      RAMB16_S4_S4                : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 9
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      295  out of   4656     6%  
+ Number of Slice Flip Flops:            263  out of   9312     2%  
+ Number of 4 input LUTs:                528  out of   9312     5%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  12  out of    232     5%  
+ Number of BRAMs:                         8  out of     20    40%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+EXT_CLK                            | DCM_SP_INST:CLKFX      | 263   |
+EXT_CLK                            | DCM_SP_INST:CLKFX180   | 8     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.214ns (Maximum Frequency: 311.139MHz)
+   Minimum input arrival time before clock: 6.992ns
+   Maximum output required time after clock: 8.176ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'EXT_CLK'
+  Clock period: 3.214ns (frequency: 311.139MHz)
+  Total number of paths / destination ports: 19349 / 697
+-------------------------------------------------------------------------
+Delay:               8.035ns (Levels of Logic = 5)
+  Source:            Inst_ArmMemInterface/RAM/ram_gen[1].RAM_x8/Mram_RAM2 (RAM)
+  Destination:       Inst_ArmSystemController/DATA_REG_31 (FF)
+  Source Clock:      EXT_CLK rising 0.2X +180
+  Destination Clock: EXT_CLK rising 0.2X
+
+  Data Path: Inst_ArmMemInterface/RAM/ram_gen[1].RAM_x8/Mram_RAM2 to Inst_ArmSystemController/DATA_REG_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S4_S4:CLKA->DOA0    5   2.800   0.637  Mram_RAM2 (DOB<4>)
+     end scope: 'ram_gen[1].RAM_x8'
+     end scope: 'RAM'
+     end scope: 'Inst_ArmMemInterface'
+     LUT4_D:I3->O         18   0.704   1.072  DBUS_DDIN<4>LogicTrst (DBUS_DDIN<4>)
+     begin scope: 'Inst_ArmSystemController'
+     LUT4_D:I3->O         20   0.704   1.106  DATA_REG_mux0005<0>11 (N0)
+     LUT4:I3->O            1   0.704   0.000  DATA_REG_mux0005<8>1 (DATA_REG_mux0005<8>)
+     FDRE:D                    0.308          DATA_REG_8
+    ----------------------------------------
+    Total                      8.035ns (5.220ns logic, 2.815ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'EXT_CLK'
+  Total number of paths / destination ports: 277 / 277
+-------------------------------------------------------------------------
+Offset:              6.992ns (Levels of Logic = 5)
+  Source:            EXT_RST (PAD)
+  Destination:       Inst_ArmRS232Interface/RS232_TRANSMITTER.WSG2/COUNT_REG_31 (FF)
+  Destination Clock: EXT_CLK rising 0.2X
+
+  Data Path: EXT_RST to Inst_ArmRS232Interface/RS232_TRANSMITTER.WSG2/COUNT_REG_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.218   0.883  EXT_RST_IBUF (EXT_RST_IBUF)
+     begin scope: 'Inst_ArmSystemController'
+     LUT2:I0->O           73   0.704   1.310  SYS_RST_INTERNAL1 (SYS_RST_INTERNAL)
+     end scope: 'Inst_ArmSystemController'
+     begin scope: 'Inst_ArmRS232Interface'
+     begin scope: 'RS232_TRANSMITTER.WSG2'
+     LUT4:I2->O           32   0.704   1.262  COUNT_REG_or00001 (COUNT_REG_or0000)
+     FDR:R                     0.911          COUNT_REG_0
+    ----------------------------------------
+    Total                      6.992ns (3.537ns logic, 3.455ns route)
+                                       (50.6% logic, 49.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'EXT_CLK'
+  Total number of paths / destination ports: 26 / 9
+-------------------------------------------------------------------------
+Offset:              8.176ns (Levels of Logic = 5)
+  Source:            Inst_ArmRS232Interface/TRANSMITTER_STATE_FSM_FFd8 (FF)
+  Destination:       EXT_TXD (PAD)
+  Source Clock:      EXT_CLK rising 0.2X
+
+  Data Path: Inst_ArmRS232Interface/TRANSMITTER_STATE_FSM_FFd8 to EXT_TXD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.591   0.762  TRANSMITTER_STATE_FSM_FFd8 (TRANSMITTER_STATE_FSM_FFd8)
+     LUT4:I0->O            1   0.704   0.595  RS232_TXD5 (RS232_TXD5)
+     LUT3:I0->O            1   0.704   0.424  RS232_TXD44_SW0 (N262)
+     LUT4:I3->O            1   0.704   0.420  RS232_TXD44 (RS232_TXD)
+     end scope: 'Inst_ArmRS232Interface'
+     OBUF:I->O                 3.272          EXT_TXD_OBUF (EXT_TXD)
+    ----------------------------------------
+    Total                      8.176ns (5.975ns logic, 2.201ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 7.47 secs
+ 
+--> 
+
+
+Total memory usage is 555824 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   32 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

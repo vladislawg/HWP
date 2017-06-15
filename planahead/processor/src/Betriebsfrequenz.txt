@@ -1,0 +1,43 @@
+Minimum Period: 12,462ns
+Maximale Betiebsfrequenz: 80,243 kHz
+
+
+-------------------------------------------------  -------------------
+SLICE_X66Y37.YQ      Tcko                  0.652   outReg[0]
+                                                   outReg_0
+SLICE_X67Y36.F4      net (fanout=3)        0.416   outReg[0]
+SLICE_X67Y36.COUT    Topcyf                1.162   CURRENT_REGLIST_FILTER/PVF_VECTOR_FILTERED_addsub0000[0]
+                                                   outReg[0]_rt
+                                                   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy<0>
+                                                   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy<1>
+SLICE_X67Y37.CIN     net (fanout=1)        0.000   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy[1]
+SLICE_X67Y37.COUT    Tbyp                  0.118   PVF_VECTOR_FILTERED_addsub0000[2]
+                                                   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy<2>
+                                                   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy<3>
+SLICE_X67Y38.CIN     net (fanout=1)        0.000   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_cy[3]
+SLICE_X67Y38.X       Tcinx                 0.462   CURRENT_REGLIST_FILTER/PVF_VECTOR_FILTERED_addsub0000[4]
+                                                   CURRENT_REGLIST_FILTER/Madd_PVF_VECTOR_FILTERED_addsub0000_xor<4>
+SLICE_X67Y33.G3      net (fanout=1)        0.555   CURRENT_REGLIST_FILTER/PVF_VECTOR_FILTERED_addsub0000[4]
+SLICE_X67Y33.Y       Tilo                  0.704   N61
+                                                   CURRENT_REGLIST_FILTER/PVF_VECTOR_FILTERED<4>1
+SLICE_X67Y33.F4      net (fanout=5)        0.044   fuckingPrio[4]
+SLICE_X67Y33.X       Tilo                  0.704   N61
+                                                   highprio<0>51_SW0
+SLICE_X66Y40.F1      net (fanout=1)        0.914   N61
+SLICE_X66Y40.X       Tilo                  0.759   N29
+                                                   highprio<0>51
+SLICE_X66Y47.G2      net (fanout=2)        0.900   N29
+SLICE_X66Y47.Y       Tilo                  0.759   LNA_ADDRESS_0_OBUF
+                                                   highprio<3>107
+SLICE_X64Y47.G4      net (fanout=5)        0.510   LNA_ADDRESS_3_OBUF
+SLICE_X64Y47.Y       Tilo                  0.759   outReg_7_not0001
+                                                   outReg_4_not000111
+SLICE_X67Y32.F4      net (fanout=4)        0.962   N111
+SLICE_X67Y32.X       Tilo                  0.704   outReg_5_not0001
+                                                   outReg_5_not00011
+SLICE_X66Y36.CE      net (fanout=1)        0.823   outReg_5_not0001
+SLICE_X66Y36.CLK     Tceck                 0.555   outReg[5]
+                                                   outReg_5
+-------------------------------------------------  ---------------------------
+Total                                     12.462ns (7.338ns logic, 5.124ns route)
+                                                   (58.9% logic, 41.1% route

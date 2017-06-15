@@ -15,10 +15,16 @@ RS-232:
 verbindet 2 Geräte direkt miteinander
 ursprünglich 25 pins
 zu viele Verschaltungen
+https://de.wikipedia.org/wiki/Datei:Serielle_schnittstelle.jpg
+https://www.lammertbies.nl/picture/db9_pin_name.png
 
 Übertragung:
 in Wörtern (5-9 Bits),
 asynchron (kein Takt), Synchronisation durch Start- und Endflanke
+https://commons.wikimedia.org/wiki/File:Rs232_oscilloscope_trace.svg
 
 Paritätsbit:
 Tabelle 2 von http://www.hsg-kl.de/faecher/inf/netze/material/bitfuerbit.html
+
+Schieberegister:
+https://www.allaboutcircuits.com/textbook/digital/chpt-12/parallel-in-serial-out-shift-register/

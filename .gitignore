@@ -133,6 +133,7 @@ _xmsgs/
 # End of https://www.gitignore.io/api/linux,windows,modelsim,xilinxise
 
 work-obj93.cf
+work-obj08.cf
 
 #planahead 
 *.log

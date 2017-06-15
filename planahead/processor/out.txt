@@ -1,0 +1,602 @@
+Reading /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6d
+
+# vsim ArmUncoreTop_tb 
+# //  ModelSim SE-64 6.6d Nov  1 2010 Linux 4.4.0-78-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armuncoretop_tb(behave)
+# Loading unisim.vcomponents
+# Loading work.armuncoretop(behave)
+# Loading work.armswitchdebounce(behave)
+# Loading work.armwaitstategenasync(behave)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.armchipselectgenerator(behave)
+# Loading work.armmeminterface(behave)
+# Loading ieee.math_real(body)
+# Loading work.armramb_4kx32(behavioral)
+# Loading work.armramb_4kx8(behavioral)
+# Loading work.armrs232interface(behave)
+# Loading work.armglobalprobes(body)
+# Loading work.armsystemcontroller(behave)
+# Loading work.armclkgen(behavioral)
+# Loading unisim.bufg(bufg_v)
+# Loading unisim.ibufg(ibufg_v)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.dcm_sp(dcm_sp_v)
+# Loading unisim.dcm_sp_clock_divide_by_2(dcm_sp_clock_divide_by_2_v)
+# Loading unisim.dcm_sp_maximum_period_check(dcm_sp_maximum_period_check_v)
+# Loading unisim.dcm_sp_clock_lost(dcm_sp_clock_lost_v)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Simulationsbeginn.
+#    Time: 0 ps  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Speichergroesse gemaess ARM_PROG_MEM_SIZE: 16384
+#    Time: 0 ps  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 22 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Simulationslauf 0 beginnt. Fortschrittsmeldungen erfolgen alle 256 Byte.
+#    Time: 22 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 22 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 0/16384
+#    Time: 20545 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 256/16384
+#    Time: 44751425 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 512/16384
+#    Time: 89482305 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 768/16384
+#    Time: 134213185 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1024/16384
+#    Time: 178944065 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1280/16384
+#    Time: 223674945 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1536/16384
+#    Time: 268405825 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1792/16384
+#    Time: 313136705 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2048/16384
+#    Time: 357867585 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2304/16384
+#    Time: 402598465 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2560/16384
+#    Time: 447329345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2816/16384
+#    Time: 492060225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3072/16384
+#    Time: 536791105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3328/16384
+#    Time: 581521985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3584/16384
+#    Time: 626252865 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3840/16384
+#    Time: 670983745 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4096/16384
+#    Time: 715714625 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4352/16384
+#    Time: 760445505 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4608/16384
+#    Time: 805176385 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4864/16384
+#    Time: 849907265 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5120/16384
+#    Time: 894638145 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5376/16384
+#    Time: 939369025 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5632/16384
+#    Time: 984099905 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5888/16384
+#    Time: 1028830785 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6144/16384
+#    Time: 1073561665 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6400/16384
+#    Time: 1118292545 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6656/16384
+#    Time: 1163023425 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6912/16384
+#    Time: 1207754305 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7168/16384
+#    Time: 1252485185 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7424/16384
+#    Time: 1297216065 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7680/16384
+#    Time: 1341946945 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7936/16384
+#    Time: 1386677825 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8192/16384
+#    Time: 1431408705 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8448/16384
+#    Time: 1476139585 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8704/16384
+#    Time: 1520870465 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8960/16384
+#    Time: 1565601345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9216/16384
+#    Time: 1610332225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9472/16384
+#    Time: 1655063105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9728/16384
+#    Time: 1699793985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9984/16384
+#    Time: 1744524865 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10240/16384
+#    Time: 1789255745 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10496/16384
+#    Time: 1833986625 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10752/16384
+#    Time: 1878717505 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11008/16384
+#    Time: 1923448385 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11264/16384
+#    Time: 1968179265 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11520/16384
+#    Time: 2012910145 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11776/16384
+#    Time: 2057641025 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12032/16384
+#    Time: 2102371905 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12288/16384
+#    Time: 2147102785 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12544/16384
+#    Time: 2191833665 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12800/16384
+#    Time: 2236564545 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13056/16384
+#    Time: 2281295425 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13312/16384
+#    Time: 2326026305 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13568/16384
+#    Time: 2370757185 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13824/16384
+#    Time: 2415488065 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14080/16384
+#    Time: 2460218945 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14336/16384
+#    Time: 2504949825 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14592/16384
+#    Time: 2549680705 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14848/16384
+#    Time: 2594411585 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15104/16384
+#    Time: 2639142465 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15360/16384
+#    Time: 2683873345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15616/16384
+#    Time: 2728604225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15872/16384
+#    Time: 2773335105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 16128/16384
+#    Time: 2818065985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2862777835 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 0/16384
+#    Time: 2862777835 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 256/16384
+#    Time: 2907399430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 512/16384
+#    Time: 2952020230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 768/16384
+#    Time: 2996641030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1024/16384
+#    Time: 3041261830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1280/16384
+#    Time: 3085882630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1536/16384
+#    Time: 3130503430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1792/16384
+#    Time: 3175124230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2048/16384
+#    Time: 3219745030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2304/16384
+#    Time: 3264365830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2560/16384
+#    Time: 3308986630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2816/16384
+#    Time: 3353607430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3072/16384
+#    Time: 3398228230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3328/16384
+#    Time: 3442849030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3584/16384
+#    Time: 3487469830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3840/16384
+#    Time: 3532090630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4096/16384
+#    Time: 3576711430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4352/16384
+#    Time: 3621332230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4608/16384
+#    Time: 3665953030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4864/16384
+#    Time: 3710573830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5120/16384
+#    Time: 3755194630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5376/16384
+#    Time: 3799815430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5632/16384
+#    Time: 3844436230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5888/16384
+#    Time: 3889057030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6144/16384
+#    Time: 3933677830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6400/16384
+#    Time: 3978298630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6656/16384
+#    Time: 4022919430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6912/16384
+#    Time: 4067540230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7168/16384
+#    Time: 4112161030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7424/16384
+#    Time: 4156781830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7680/16384
+#    Time: 4201402630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7936/16384
+#    Time: 4246023430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8192/16384
+#    Time: 4290644230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8448/16384
+#    Time: 4335265030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8704/16384
+#    Time: 4379885830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8960/16384
+#    Time: 4424506630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9216/16384
+#    Time: 4469127430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9472/16384
+#    Time: 4513748230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9728/16384
+#    Time: 4558369030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9984/16384
+#    Time: 4602989830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10240/16384
+#    Time: 4647610630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10496/16384
+#    Time: 4692231430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10752/16384
+#    Time: 4736852230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11008/16384
+#    Time: 4781473030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11264/16384
+#    Time: 4826093830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11520/16384
+#    Time: 4870714630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11776/16384
+#    Time: 4915335430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12032/16384
+#    Time: 4959956230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12288/16384
+#    Time: 5004577030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12544/16384
+#    Time: 5049197830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12800/16384
+#    Time: 5093818630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13056/16384
+#    Time: 5138439430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13312/16384
+#    Time: 5183060230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13568/16384
+#    Time: 5227681030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13824/16384
+#    Time: 5272301830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14080/16384
+#    Time: 5316922630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14336/16384
+#    Time: 5361543430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14592/16384
+#    Time: 5406164230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14848/16384
+#    Time: 5450785030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15104/16384
+#    Time: 5495405830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15360/16384
+#    Time: 5540026630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15616/16384
+#    Time: 5584647430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15872/16384
+#    Time: 5629268230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 16128/16384
+#    Time: 5673889030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 5718509830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 5718509830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Simulationslauf 1 beginnt. Fortschrittsmeldungen erfolgen alle 256 Byte.
+#    Time: 5718509830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 5718509830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 0/16384
+#    Time: 5718530345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 256/16384
+#    Time: 5763261225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 512/16384
+#    Time: 5807992105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 768/16384
+#    Time: 5852722985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1024/16384
+#    Time: 5897453865 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1280/16384
+#    Time: 5942184745 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1536/16384
+#    Time: 5986915625 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 1792/16384
+#    Time: 6031646505 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2048/16384
+#    Time: 6076377385 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2304/16384
+#    Time: 6121108265 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2560/16384
+#    Time: 6165839145 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 2816/16384
+#    Time: 6210570025 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3072/16384
+#    Time: 6255300905 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3328/16384
+#    Time: 6300031785 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3584/16384
+#    Time: 6344762665 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 3840/16384
+#    Time: 6389493545 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4096/16384
+#    Time: 6434224425 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4352/16384
+#    Time: 6478955305 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4608/16384
+#    Time: 6523686185 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 4864/16384
+#    Time: 6568417065 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5120/16384
+#    Time: 6613147945 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5376/16384
+#    Time: 6657878825 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5632/16384
+#    Time: 6702609705 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 5888/16384
+#    Time: 6747340585 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6144/16384
+#    Time: 6792071465 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6400/16384
+#    Time: 6836802345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6656/16384
+#    Time: 6881533225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 6912/16384
+#    Time: 6926264105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7168/16384
+#    Time: 6970994985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7424/16384
+#    Time: 7015725865 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7680/16384
+#    Time: 7060456745 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 7936/16384
+#    Time: 7105187625 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8192/16384
+#    Time: 7149918505 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8448/16384
+#    Time: 7194649385 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8704/16384
+#    Time: 7239380265 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 8960/16384
+#    Time: 7284111145 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9216/16384
+#    Time: 7328842025 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9472/16384
+#    Time: 7373572905 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9728/16384
+#    Time: 7418303785 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 9984/16384
+#    Time: 7463034665 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10240/16384
+#    Time: 7507765545 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10496/16384
+#    Time: 7552496425 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 10752/16384
+#    Time: 7597227305 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11008/16384
+#    Time: 7641958185 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11264/16384
+#    Time: 7686689065 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11520/16384
+#    Time: 7731419945 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 11776/16384
+#    Time: 7776150825 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12032/16384
+#    Time: 7820881705 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12288/16384
+#    Time: 7865612585 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12544/16384
+#    Time: 7910343465 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 12800/16384
+#    Time: 7955074345 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13056/16384
+#    Time: 7999805225 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13312/16384
+#    Time: 8044536105 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13568/16384
+#    Time: 8089266985 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 13824/16384
+#    Time: 8133997865 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14080/16384
+#    Time: 8178728745 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14336/16384
+#    Time: 8223459625 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14592/16384
+#    Time: 8268190505 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 14848/16384
+#    Time: 8312921385 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15104/16384
+#    Time: 8357652265 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15360/16384
+#    Time: 8402383145 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15616/16384
+#    Time: 8447114025 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 15872/16384
+#    Time: 8491844905 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Senden: Byte 16128/16384
+#    Time: 8536575785 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 8581287635 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 0/16384
+#    Time: 8581287635 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 256/16384
+#    Time: 8625909230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 512/16384
+#    Time: 8670530030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 768/16384
+#    Time: 8715150830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1024/16384
+#    Time: 8759771630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1280/16384
+#    Time: 8804392430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1536/16384
+#    Time: 8849013230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 1792/16384
+#    Time: 8893634030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2048/16384
+#    Time: 8938254830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2304/16384
+#    Time: 8982875630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2560/16384
+#    Time: 9027496430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 2816/16384
+#    Time: 9072117230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3072/16384
+#    Time: 9116738030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3328/16384
+#    Time: 9161358830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3584/16384
+#    Time: 9205979630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 3840/16384
+#    Time: 9250600430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4096/16384
+#    Time: 9295221230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4352/16384
+#    Time: 9339842030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4608/16384
+#    Time: 9384462830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 4864/16384
+#    Time: 9429083630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5120/16384
+#    Time: 9473704430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5376/16384
+#    Time: 9518325230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5632/16384
+#    Time: 9562946030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 5888/16384
+#    Time: 9607566830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6144/16384
+#    Time: 9652187630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6400/16384
+#    Time: 9696808430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6656/16384
+#    Time: 9741429230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 6912/16384
+#    Time: 9786050030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7168/16384
+#    Time: 9830670830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7424/16384
+#    Time: 9875291630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7680/16384
+#    Time: 9919912430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 7936/16384
+#    Time: 9964533230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8192/16384
+#    Time: 10009154030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8448/16384
+#    Time: 10053774830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8704/16384
+#    Time: 10098395630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 8960/16384
+#    Time: 10143016430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9216/16384
+#    Time: 10187637230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9472/16384
+#    Time: 10232258030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9728/16384
+#    Time: 10276878830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 9984/16384
+#    Time: 10321499630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10240/16384
+#    Time: 10366120430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10496/16384
+#    Time: 10410741230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 10752/16384
+#    Time: 10455362030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11008/16384
+#    Time: 10499982830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11264/16384
+#    Time: 10544603630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11520/16384
+#    Time: 10589224430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 11776/16384
+#    Time: 10633845230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12032/16384
+#    Time: 10678466030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12288/16384
+#    Time: 10723086830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12544/16384
+#    Time: 10767707630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 12800/16384
+#    Time: 10812328430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13056/16384
+#    Time: 10856949230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13312/16384
+#    Time: 10901570030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13568/16384
+#    Time: 10946190830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 13824/16384
+#    Time: 10990811630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14080/16384
+#    Time: 11035432430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14336/16384
+#    Time: 11080053230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14592/16384
+#    Time: 11124674030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 14848/16384
+#    Time: 11169294830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15104/16384
+#    Time: 11213915630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15360/16384
+#    Time: 11258536430 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15616/16384
+#    Time: 11303157230 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 15872/16384
+#    Time: 11347778030 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Lesen: Byte 16128/16384
+#    Time: 11392398830 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 11437019630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 11437019630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: Funktionstest erfolgreich.
+#    Time: 11437019630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 11437019630 ns  Iteration: 0  Instance: /armuncoretop_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 11437019630 ns  Iteration: 0  Process: /armuncoretop_tb/tb File: src/ArmUncoreTop_tb.vhd
+# Break in Process tb at src/ArmUncoreTop_tb.vhd line 228
+# Stopped at src/ArmUncoreTop_tb.vhd line 228 
+# 
+# <EOF> 

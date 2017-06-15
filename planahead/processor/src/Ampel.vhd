@@ -35,48 +35,55 @@ begin
 
 	state_reg : process(CLK, RST)is
 	begin
-			if RST = '1' then
-				AMPEL_STATE <= S_ROT;
-			elsif (CLK = '1' and CLK'Event) then
-				case AMPEL_STATE is
-					when S_ROT => if(E_AKTIV = '1') then
-														AMPEL_NEXT_STATE <= S_GELBROT;
-												else
-														AMPEL_NEXT_STATE <= S_AUS;
-												end if;
-					when S_GELBROT => AMPEL_NEXT_STATE <= S_GRUEN;
-					when S_GRUEN => AMPEL_NEXT_STATE <= S_GELB;
-					when S_GELB => if (E_AKTIV = '1') then
-														AMPEL_NEXT_STATE <= S_ROT;
-												 else
-														AMPEL_NEXT_STATE <= S_AUS;
-												 end if;
-					when S_AUS => AMPEL_NEXT_STATE <= S_GELB;
-				end case;
+			if (CLK = '1' and CLK'Event) then
+				AMPEL_STATE <= AMPEL_NEXT_STATE;
+				if (RST = '1') then
+					AMPEL_STATE <= S_ROT; 
+				end if;
 			end if;
 	end process state_reg;
 
-	set_output_and_next_state : process(AMPEL_NEXT_STATE) is
+	set_output_and_next_state : process(AMPEL_STATE, E_AKTIV) is
 	begin
-		case AMPEL_NEXT_STATE is
-			when S_ROT => A_ROT <= '1' ;
-										A_GELB <= '0';
-										A_GRUEN <= '0';
-			when S_GELBROT => A_ROT <= '1';
-												A_GELB <= '1';
-												A_GRUEN <= '0';
+		case AMPEL_STATE is
+			when S_ROT => 	A_ROT <= '1';
+							A_GELB <='0';
+							A_GRUEN <='0';
+							if E_AKTIV = '1' then
+								AMPEL_NEXT_STATE <= S_GELBROT;
+							else
+								AMPEL_NEXT_STATE <= S_AUS;
+							end if ;
+
+			when S_GELBROT => AMPEL_NEXT_STATE <= S_GRUEN;
+							A_ROT <= '1';
+							A_GELB <='1';
+							A_GRUEN <='0';
+
+			when S_GRUEN => AMPEL_NEXT_STATE <= S_GELB;
+							A_ROT <= '0';
+							A_GELB <='0';
+							A_GRUEN <='1';
+
 			when S_GELB => 	A_ROT <= '0';
-											A_GELB <= '1';
-											A_GRUEN <= '0';
-			when S_GRUEN => A_ROT <= '0';
-											A_GELB <= '0';
-											A_GRUEN <= '1';
-			when S_AUS => A_ROT <= '0';
-										A_GELB <= '0';
-										A_GRUEN <= '0';
+							A_GELB <='1';
+							A_GRUEN <='0';
+							if E_AKTIV = '0' then
+								AMPEL_NEXT_STATE <= S_AUS;
+							else 
+								AMPEL_NEXT_STATE <= S_ROT;
+							end if ;
+
+			when S_AUS => AMPEL_NEXT_STATE <= S_GELB;
+							A_ROT <= '0';
+							A_GELB <='0';
+							A_GRUEN <='0';
 		end case;
 
 	end process set_output_and_next_state;
+
+
+
 
 
 
